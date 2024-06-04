@@ -11,7 +11,7 @@ while true; do
 	echo "-------------------------------- CreateExecutable --------------------------------"
     echo "Selecione uma opção:"
     echo '1. Preparar o Ambiente'
-    echo '2. Compilar o MIApp'
+    echo '2. Compilar o MIAppRun'
     echo "3. Sair"
     echo "-------------------------------- /CreateExecutable --------------------------------"
 	echo ""
@@ -29,9 +29,9 @@ while true; do
 			echo "Concluido!"
 			;;
 		2)
-			echo "Compilando miapp.py..."
+			echo "Compilando miapprun.py..."
 			
-			mivenv/bin/pyinstaller -F miapp.py
+			mivenv/bin/pyinstaller -F miapprun.py
 			
 			echo "Concluido!"
 			;;
