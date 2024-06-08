@@ -32,6 +32,8 @@ while true; do
 
 			echo "Instalando o pyinstaller..."
 			mivenv/bin/pip install pyinstaller
+            
+            cd ../
 
 			echo "Concluido!"
 			;;
@@ -58,6 +60,8 @@ while true; do
 			echo "Instalando o PyInstaller..."
 			WINEPREFIX="$miDir/build/.wine/" wine build/.wine/drive_c/Python3/python.exe build/.wine/drive_c/Python3/Scripts/pip.exe install pyinstaller
 
+            cd ../
+
 			echo "Concluido!"
 			;;
 	    3)
@@ -72,6 +76,8 @@ while true; do
             cd linux/
 
 			mivenv/bin/pyinstaller -F miapprun.py
+
+            cd ../
 			
 			echo "Concluido!"
 			;;
@@ -89,6 +95,8 @@ while true; do
 			miDir=$(pwd)
 			WINEPREFIX="$miDir/build/.wine/" wine build/.wine/drive_c/Python3/Scripts/pyinstaller.exe --onefile miapprun.py
 			
+            cd ../
+
 			echo "Concluido!"
 			;;
         5)
