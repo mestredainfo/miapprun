@@ -9,22 +9,23 @@
 import sys
 import os
 import webbrowser
-import tkinter
+import platform
 import tkinter.messagebox
 from subprocess import Popen,PIPE
 
-def confirm():
-    window = tkinter.Tk()
-    window.wm_withdraw()
-    message = tkinter.messagebox.askyesno(title="Requer MIApp", message="Para executar esse software você precisa do MIApp instalado, deseja baixar o MIApp agora?")
+def miConfirm():
+    miMessage = tkinter.messagebox.askyesno(title="Requer MIApp", message="Para executar esse software você precisa do MIApp instalado, deseja baixar o MIApp agora?")
 
-    if message:
+    if miMessage:
         webbrowser.open_new('https://mestredainfo.wordpress.com/miapp/')
 
+miAppFile = "/opt/miapp/miapp"
+if (platform.system() == "Linux"):
+    miAppFile = "C:\\\\miapp\\\\miapp.exe"
 
-if os.path.isfile("/opt/miapp/miapp"):
-    proc = Popen(["/opt/miapp/miapp", os.path.dirname(sys.executable)])
+if os.path.isfile(miAppFile):
+    miProc = Popen([miAppFile, os.path.dirname(sys.executable)])
 else:
-    confirm()
+    miConfirm()
 
 sys.exit()
