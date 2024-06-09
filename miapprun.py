@@ -11,12 +11,17 @@ import os
 import platform
 from subprocess import Popen,PIPE
 
+miSeparator = ""
+
 if (platform.system() == "Linux"):
-    miAppFile = "/opt/miapp/miapp"
+	miAppFile = "/opt/miapp/miapp"
+	miAppPath = miSeparator.join([os.path.dirname(sys.executable), "/app/"])
 else:
 	miAppFile = "C:\\\\miapp\\\\miapp.exe"
+	miAppPath = miSeparator.join([os.path.dirname(sys.executable), "\\app\\"])
 
 if os.path.isfile(miAppFile):
-    miProc = Popen([miAppFile, os.path.dirname(sys.executable)])
+	if os.path.exists(miAppPath):
+		miProc = Popen([miAppFile, os.path.dirname(sys.executable)])
 
 sys.exit()
