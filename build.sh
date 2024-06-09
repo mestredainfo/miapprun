@@ -59,7 +59,7 @@ while true; do
 
 			echo "Instalando o PyInstaller..."
 			WINEPREFIX="$miDir/build/.wine/" wine build/.wine/drive_c/Python3/python.exe build/.wine/drive_c/Python3/Scripts/pip.exe install pyinstaller
-
+			
             cd ../
 
 			echo "Concluido!"

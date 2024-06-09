@@ -10,16 +10,23 @@ import sys
 import os
 import webbrowser
 import platform
-import tkinter.messagebox
+import locale
 from subprocess import Popen,PIPE
 
-def miConfirm():
-    miMessage = tkinter.messagebox.askyesno(title="Requer MIApp", message="Deseja baixar o MIApp agora?\n\nPara executar esse software você precisa do MIApp instalado.")
-
-    if miMessage:
+milang, _ = locale.getlocale()
+milangpt = milang.split('_')[0]
+    
+def miConfirm():    
+    if milangpt == "pt":    
+    	sys.stdout.write("\nO MIApp não foi encontrado!\n\nO " + os.path.basename(sys.executable) + " requer o MIApp instalado, deseja baixar agora? [s/n]")
+    else:
+    	sys.stdout.write("\nMIApp was not found!\n\n" + os.path.basename(sys.executable) + " requires MIApp installed, want to download now? [y/n]")
+    	
+    miChoice = input().lower()
+    if miChoice == 'y' or miChoice == 's':
         webbrowser.open_new('https://mestredainfo.wordpress.com/miapp/')
 
-miAppFile = "/opt/miapp/miapp"
+miAppFile = "/opt/miapp/miapp1"
 if (platform.system() == "Windows"):
     miAppFile = "C:\\\\miapp\\\\miapp.exe"
 

@@ -1,10 +1,5 @@
 #Linux
-linux/build/
-linux/mivenv/
-linux/dist/
-linux/miapprun.spec
+linux/
 
 #win32
-win32/build/
-win32/dist/
-win32/miapprun.spec
+win32/
