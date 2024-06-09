@@ -26,7 +26,7 @@ def miConfirm():
     if miChoice == 'y' or miChoice == 's':
         webbrowser.open_new('https://mestredainfo.wordpress.com/miapp/')
 
-miAppFile = "/opt/miapp/miapp1"
+miAppFile = "/opt/miapp/miapp"
 if (platform.system() == "Windows"):
     miAppFile = "C:\\\\miapp\\\\miapp.exe"
 
