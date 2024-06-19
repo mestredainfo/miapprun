@@ -1,11 +1,8 @@
 # MIAppRun
 
-MIAppRun é um aplicativo portátil que passa a localização da pasta do projeto PHP para o MIApp e dessa forma executa o software no desktop. Compatível com Linux (Debian e Ubuntu) e Windows.
+MIAppRun é um aplicativo portátil que passa a localização da pasta do projeto PHP para o MIApp 4.0.0 e dessa forma executa o software no desktop. Compatível com Linux (Debian e Ubuntu) e Windows.
 
-## Documentação
-
-- [Página do MIApp](https://mestredainfo.wordpress.com/miapp/)
-- [Apoie o MIApp](https://mestredainfo.wordpress.com/assinantes/)
+Este software não é mais necessário para o MIApp 5 ou superior.
 
 ## Licença
 
